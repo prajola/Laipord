@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAIPORD — AI Sales Specialist</title>
+    <meta name="description" content="LAIPORD: The ultra-premium AI Sales Specialist. Revolutionize your sales pipeline with cutting-edge artificial intelligence.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- CUSTOM CURSOR -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- PARTICLE CANVAS -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- NEURAL GRID -->
+    <canvas id="neural-grid"></canvas>
+
+    <!-- LOADING SCREEN -->
+    <div id="loader">
+        <div class="loader-logo">
+            <span class="loader-letter" style="--i:0">L</span>
+            <span class="loader-letter" style="--i:1">A</span>
+            <span class="loader-letter" style="--i:2">I</span>
+            <span class="loader-letter" style="--i:3">P</span>
+            <span class="loader-letter" style="--i:4">O</span>
+            <span class="loader-letter" style="--i:5">R</span>
+            <span class="loader-letter" style="--i:6">D</span>
+        </div>
+        <div class="loader-bar"><div class="loader-fill"></div></div>
+        <p class="loader-text">Initializing AI Sales Engine...</p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" id="nav-logo">
+                <img src="assets/laipord-mascot.png" alt="Laipord Logo" class="logo-image">
+                <div class="logo-text-wrapper">
+                    <span class="text-laipord">LAIPORD</span>
+                    <span class="text-ai">AI</span>
+                </div>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+                <a href="#features" class="nav-link" data-section="features">Features</a>
+                <a href="#metrics" class="nav-link" data-section="metrics">Metrics</a>
+                <a href="#dashboard" class="nav-link" data-section="dashboard">Dashboard</a>
+                <a href="#pricing" class="nav-link" data-section="pricing">Pricing</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-ghost" id="btn-login">Log In</button>
+                <button class="btn-gold" id="btn-cta-nav">Get Started</button>
+            </div>
+            <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#hero" class="mobile-link">Home</a>
+        <a href="#features" class="mobile-link">Features</a>
+        <a href="#metrics" class="mobile-link">Metrics</a>
+        <a href="#dashboard" class="mobile-link">Dashboard</a>
+        <a href="#pricing" class="mobile-link">Pricing</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <button class="btn-gold mobile-cta">Get Started</button>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="section hero-section">
+        <div class="hero-content">
+            <div class="hero-badge reveal-up">
+                <span class="badge-dot"></span>
+                AI-Powered Sales Revolution
+            </div>
+            <h1 class="hero-title reveal-up">
+                <span class="title-line">Unleash The</span>
+                <span class="title-line title-gold">Predator</span>
+                <span class="title-line">In Sales</span>
+            </h1>
+            <p class="hero-subtitle reveal-up">
+                LAIPORD is an ultra-intelligent AI Sales Specialist that hunts leads, 
+                closes deals, and dominates your pipeline — 24/7, with predatory precision.
+            </p>
+            <div class="hero-buttons reveal-up">
+                <button class="btn-gold btn-large" id="hero-cta">
+                    <span>Start Hunting</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <button class="btn-outline btn-large" id="hero-demo">
+                    <span>Watch Demo</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </button>
+            </div>
+            <div class="hero-stats reveal-up">
+                <div class="hero-stat">
+                    <span class="stat-number" data-target="847">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label">ROI Increase</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-target="12">0</span><span class="stat-suffix">M+</span>
+                    <span class="stat-label">Deals Closed</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-target="99">0</span><span class="stat-suffix">.9%</span>
+                    <span class="stat-label">Accuracy</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual reveal-scale">
+            <div class="mascot-glow"></div>
+            
+            <!-- Holographic UI Elements -->
+            <div class="holo-ring holo-ring-1"></div>
+            <div class="holo-ring holo-ring-2"></div>
+            <div class="holo-ring holo-ring-3"></div>
+            <div class="scanner-line"></div>
+            
+            <!-- AI Sales Specialist Neural Core -->
+            <div class="ai-core-container" id="hero-mascot">
+                <div class="core-glow"></div>
+                <div class="ai-brain">
+                    <div class="brain-face bf-front"></div>
+                    <div class="brain-face bf-back"></div>
+                    <div class="brain-face bf-left"></div>
+                    <div class="brain-face bf-right"></div>
+                    <div class="brain-face bf-top"></div>
+                    <div class="brain-face bf-bottom"></div>
+                </div>
+                <div class="neural-sphere sphere-x"></div>
+                <div class="neural-sphere sphere-y"></div>
+                <div class="neural-sphere sphere-z"></div>
+                <div class="orbit-particle p1"></div>
+                <div class="orbit-particle p2"></div>
+                <div class="orbit-particle p3"></div>
+            </div>
+            
+            <div class="data-node dn-1"></div>
+            <div class="data-node dn-2"></div>
+            <div class="data-node dn-3"></div>
+
+            <div class="floating-card fc-1">
+                <div class="fc-icon">📈</div>
+                <div class="fc-text">
+                    <span class="fc-label">Revenue</span>
+                    <span class="fc-value">+247%</span>
+                </div>
+            </div>
+            <div class="floating-card fc-2">
+                <div class="fc-icon">🎯</div>
+                <div class="fc-text">
+                    <span class="fc-label">Lead Score</span>
+                    <span class="fc-value">98.7</span>
+                </div>
+            </div>
+            <div class="floating-card fc-3">
+                <div class="fc-icon">⚡</div>
+                <div class="fc-text">
+                    <span class="fc-label">Response</span>
+                    <span class="fc-value">0.3s</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scroll-indicator">
+            <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="section">
+        <div class="section-container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Capabilities</span>
+                <h2 class="section-title">Predatory <span class="text-gold">Intelligence</span></h2>
+                <p class="section-desc">Six pillars of AI-driven sales dominance that transform your entire revenue operation.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal-up" style="--delay:0.1s">
+                    <div class="feature-icon-wrap"><div class="feature-icon">🧠</div></div>
+                    <h3>Neural Lead Scoring</h3>
+                    <p>Deep learning algorithms analyze 200+ behavioral signals to predict conversion probability with 99.2% accuracy.</p>
+                    <div class="feature-glow"></div>
+                </div>
+                <div class="feature-card reveal-up" style="--delay:0.2s">
+                    <div class="feature-icon-wrap"><div class="feature-icon">💬</div></div>
+                    <h3>Autonomous Outreach</h3>
+                    <p>AI-crafted hyper-personalized messages across email, LinkedIn, and SMS — indistinguishable from human communication.</p>
+                    <div class="feature-glow"></div>
+                </div>
+                <div class="feature-card reveal-up" style="--delay:0.3s">
+                    <div class="feature-icon-wrap"><div class="feature-icon">📊</div></div>
+                    <h3>Pipeline Prophecy</h3>
+                    <p>Predict deal outcomes 30 days in advance. Know which deals will close before your competitors even engage.</p>
+                    <div class="feature-glow"></div>
+                </div>
+                <div class="feature-card reveal-up" style="--delay:0.4s">
+                    <div class="feature-icon-wrap"><div class="feature-icon">🎯</div></div>
+                    <h3>Smart Targeting</h3>
+                    <p>Identify ideal customer profiles from billions of data points. Zero in on decision-makers with surgical precision.</p>
+                    <div class="feature-glow"></div>
+                </div>
+                <div class="feature-card reveal-up" style="--delay:0.5s">
+                    <div class="feature-icon-wrap"><div class="feature-icon">⚡</div></div>
+                    <h3>Real-Time Coaching</h3>
+                    <p>Live AI guidance during sales calls with sentiment analysis, objection handling, and next-best-action prompts.</p>
+                    <div class="feature-glow"></div>
+                </div>
+                <div class="feature-card reveal-up" style="--delay:0.6s">
+                    <div class="feature-icon-wrap"><div class="feature-icon">🔒</div></div>
+                    <h3>Deal Intelligence</h3>
+                    <p>Automated contract analysis, risk assessment, and negotiation strategy — closing deals 3x faster.</p>
+                    <div class="feature-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METRICS SECTION -->
+    <section id="metrics" class="section">
+        <div class="section-container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Performance</span>
+                <h2 class="section-title">Numbers That <span class="text-gold">Dominate</span></h2>
+                <p class="section-desc">Real results from real enterprises powered by LAIPORD's predatory AI engine.</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card reveal-up" style="--delay:0.1s">
+                    <div class="metric-ring"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill" data-percent="95"/></svg><span class="metric-percent">95%</span></div>
+                    <h3>Close Rate</h3>
+                    <p>Industry-shattering conversion</p>
+                </div>
+                <div class="metric-card reveal-up" style="--delay:0.2s">
+                    <div class="metric-ring"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill" data-percent="78"/></svg><span class="metric-percent">78%</span></div>
+                    <h3>Time Saved</h3>
+                    <p>Automated pipeline management</p>
+                </div>
+                <div class="metric-card reveal-up" style="--delay:0.3s">
+                    <div class="metric-ring"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill" data-percent="92"/></svg><span class="metric-percent">92%</span></div>
+                    <h3>Satisfaction</h3>
+                    <p>Enterprise client approval</p>
+                </div>
+                <div class="metric-card reveal-up" style="--delay:0.4s">
+                    <div class="metric-ring"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill" data-percent="88"/></svg><span class="metric-percent">88%</span></div>
+                    <h3>Revenue Growth</h3>
+                    <p>Average first-year increase</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DASHBOARD SECTION -->
+    <section id="dashboard" class="section">
+        <div class="section-container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Command Center</span>
+                <h2 class="section-title">Your Sales <span class="text-gold">War Room</span></h2>
+                <p class="section-desc">A command center that gives you god-mode visibility over every deal, every lead, every dollar.</p>
+            </div>
+            <div class="dashboard-preview reveal-up">
+                <div class="dash-window">
+                    <div class="dash-toolbar">
+                        <div class="dash-dots"><span></span><span></span><span></span></div>
+                        <span class="dash-url">app.laipord.ai/dashboard</span>
+                    </div>
+                    <div class="dash-body">
+                        <div class="dash-sidebar">
+                            <div class="dash-nav-item active">📊 Overview</div>
+                            <div class="dash-nav-item">🎯 Pipeline</div>
+                            <div class="dash-nav-item">💬 AI Chat</div>
+                            <div class="dash-nav-item">📈 Analytics</div>
+                            <div class="dash-nav-item">⚙️ Settings</div>
+                        </div>
+                        <div class="dash-main">
+                            <div class="dash-kpi-row">
+                                <div class="dash-kpi"><span class="kpi-val">$4.2M</span><span class="kpi-label">Revenue</span><span class="kpi-change up">+24%</span></div>
+                                <div class="dash-kpi"><span class="kpi-val">1,847</span><span class="kpi-label">Active Leads</span><span class="kpi-change up">+12%</span></div>
+                                <div class="dash-kpi"><span class="kpi-val">342</span><span class="kpi-label">Deals Won</span><span class="kpi-change up">+38%</span></div>
+                                <div class="dash-kpi"><span class="kpi-val">0.3s</span><span class="kpi-label">Avg Response</span><span class="kpi-change up">-67%</span></div>
+                            </div>
+                            <div class="dash-chart-row">
+                                <div class="dash-chart">
+                                    <div class="chart-title">Revenue Trend</div>
+                                    <div class="chart-bars">
+                                        <div class="bar" style="--h:40%"><span>Jan</span></div>
+                                        <div class="bar" style="--h:55%"><span>Feb</span></div>
+                                        <div class="bar" style="--h:45%"><span>Mar</span></div>
+                                        <div class="bar" style="--h:70%"><span>Apr</span></div>
+                                        <div class="bar" style="--h:65%"><span>May</span></div>
+                                        <div class="bar" style="--h:85%"><span>Jun</span></div>
+                                        <div class="bar" style="--h:78%"><span>Jul</span></div>
+                                        <div class="bar active" style="--h:95%"><span>Aug</span></div>
+                                    </div>
+                                </div>
+                                <div class="dash-chat">
+                                    <div class="chart-title">AI Assistant</div>
+                                    <div class="chat-messages">
+                                        <div class="chat-msg ai">I've identified 23 high-priority leads ready for outreach. Shall I draft personalized emails?</div>
+                                        <div class="chat-msg user">Yes, prioritize enterprise accounts over $500K.</div>
+                                        <div class="chat-msg ai">Done. 23 emails drafted and scheduled. Predicted response rate: 67%.</div>
+                                    </div>
+                                    <div class="chat-input-area">
+                                        <input type="text" placeholder="Ask LAIPORD anything..." class="chat-input" disabled>
+                                        <button class="chat-send">→</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="section">
+        <div class="section-container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Investment</span>
+                <h2 class="section-title">Choose Your <span class="text-gold">Arsenal</span></h2>
+                <p class="section-desc">Scale your predatory advantage with a plan that matches your ambition.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal-up" style="--delay:0.1s">
+                    <div class="pricing-tier">Hunter</div>
+                    <div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">497</span><span class="price-period">/mo</span></div>
+                    <ul class="pricing-features">
+                        <li>Up to 1,000 leads/month</li>
+                        <li>AI email outreach</li>
+                        <li>Basic lead scoring</li>
+                        <li>Pipeline dashboard</li>
+                        <li>Email support</li>
+                    </ul>
+                    <button class="btn-outline btn-full">Start Hunting</button>
+                </div>
+                <div class="pricing-card featured reveal-up" style="--delay:0.2s">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-tier">Predator</div>
+                    <div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">1,297</span><span class="price-period">/mo</span></div>
+                    <ul class="pricing-features">
+                        <li>Up to 10,000 leads/month</li>
+                        <li>Omni-channel outreach</li>
+                        <li>Advanced neural scoring</li>
+                        <li>Real-time coaching</li>
+                        <li>Deal intelligence</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <button class="btn-gold btn-full">Dominate Now</button>
+                </div>
+                <div class="pricing-card reveal-up" style="--delay:0.3s">
+                    <div class="pricing-tier">Apex</div>
+                    <div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">Custom</span></div>
+                    <ul class="pricing-features">
+                        <li>Unlimited leads</li>
+                        <li>Full platform access</li>
+                        <li>Custom AI models</li>
+                        <li>Dedicated success manager</li>
+                        <li>API & integrations</li>
+                        <li>SLA guarantee</li>
+                    </ul>
+                    <button class="btn-outline btn-full">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / CTA SECTION -->
+    <section id="contact" class="section">
+        <div class="section-container">
+            <div class="cta-block reveal-up">
+                <h2 class="cta-title">Ready to Become the <span class="text-gold">Apex Predator</span> of Sales?</h2>
+                <p class="cta-desc">Join 2,000+ enterprises already dominating their markets with LAIPORD's AI-powered sales intelligence.</p>
+                <div class="cta-form">
+                    <input type="email" placeholder="Enter your email" class="cta-input" id="cta-email">
+                    <button class="btn-gold btn-large" id="cta-submit">
+                        <span>Request Access</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+                <p class="cta-note">No credit card required · 14-day free trial · Setup in minutes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo-wrap">
+                    <img src="assets/laipord-mascot.png" alt="Laipord Logo" class="logo-image">
+                    <span class="logo-text">LAIPORD</span>
+                </div>
+                <p class="footer-tagline">The Apex Predator of AI Sales</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="#">Features</a><a href="#">Pricing</a><a href="#">Integrations</a><a href="#">API</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Blog</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Security</a><a href="#">GDPR</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 LAIPORD. All rights reserved. Built with predatory precision.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
