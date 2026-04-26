@@ -404,3 +404,22 @@ a, button, .faq-question { cursor: pointer; }
     border-left: 1px solid var(--c-glass-border);
     padding-left: 12px;
 }
+
+/* Definition Section */
+.definition-section { padding: 80px 0 40px; text-align: center; }
+.definition-wrapper { max-width: 900px; margin: 0 auto; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); padding: 60px 40px; border-radius: 24px; position: relative; box-shadow: inset 0 0 100px rgba(212, 168, 67, 0.02); }
+.definition-wrapper::before { content: ''; position: absolute; top: -1px; left: 50%; transform: translateX(-50%); width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--c-gold-primary), transparent); }
+.huge-dictionary { font-family: monospace; font-size: 1.2rem; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed rgba(255, 255, 255, 0.1); display: inline-block; }
+.def-word { font-weight: 800; color: var(--c-gold-primary); font-size: 1.5rem; letter-spacing: 2px; margin-right: 15px; }
+.def-pronun { color: var(--c-text-muted); font-style: italic; margin-right: 15px; }
+.def-type { color: #fff; margin-right: 20px; font-weight: bold; }
+.def-text { color: #aaa; border-left: 2px solid var(--c-gold-primary); padding-left: 15px; }
+.definition-tagline { font-family: var(--f-heading); font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 25px; color: #fff; letter-spacing: -1px; }
+.definition-desc { font-size: 1.2rem; color: var(--c-text-muted); max-width: 700px; margin: 0 auto; line-height: 1.6; }
+
+@media (max-width: 768px) {
+    .huge-dictionary { font-size: 0.9rem; }
+    .def-word { font-size: 1.2rem; display: block; margin-bottom: 10px; }
+    .def-text { display: block; margin-top: 15px; border-left: none; border-top: 2px solid var(--c-gold-primary); padding-left: 0; padding-top: 10px; }
+    .definition-tagline { font-size: 2rem; }
+}
