@@ -651,3 +651,33 @@ a, button, .faq-question { cursor: pointer; }
     50% { opacity: 1; }
     100% { top: 90%; opacity: 0; }
 }
+
+/* AI Sales Specialist Neural Core */
+.ai-core-container { position: relative; width: 300px; height: 300px; display: flex; align-items: center; justify-content: center; z-index: 2; transform-style: preserve-3d; transition: transform 0.1s ease-out; }
+.core-glow { position: absolute; width: 150px; height: 150px; background: var(--c-gold-primary); filter: blur(60px); opacity: 0.3; z-index: -1; animation: core-pulse 4s ease-in-out infinite; }
+@keyframes core-pulse { 0%, 100% { transform: scale(1); opacity: 0.2; } 50% { transform: scale(1.5); opacity: 0.4; } }
+.ai-brain { position: relative; width: 100px; height: 100px; transform-style: preserve-3d; animation: spin-brain 20s linear infinite; }
+@keyframes spin-brain { 0% { transform: rotateY(0) rotateX(0); } 100% { transform: rotateY(360deg) rotateX(360deg); } }
+.brain-face { position: absolute; width: 100px; height: 100px; background: rgba(255, 123, 0, 0.15); border: 2px solid var(--c-gold-primary); box-shadow: inset 0 0 20px rgba(255, 123, 0, 0.5), 0 0 15px rgba(255, 123, 0, 0.4); backdrop-filter: blur(5px); }
+.bf-front  { transform: translateZ(50px); } .bf-back   { transform: rotateY(180deg) translateZ(50px); } .bf-left   { transform: rotateY(-90deg) translateZ(50px); } .bf-right  { transform: rotateY(90deg) translateZ(50px); } .bf-top    { transform: rotateX(90deg) translateZ(50px); } .bf-bottom { transform: rotateX(-90deg) translateZ(50px); }
+.neural-sphere { position: absolute; top: 50%; left: 50%; border-radius: 50%; border: 1px solid var(--c-gold-primary); pointer-events: none; }
+.sphere-x { width: 350px; height: 350px; margin: -175px 0 0 -175px; animation: spin-sphere-x 15s linear infinite; opacity: 0.3; }
+.sphere-y { width: 300px; height: 300px; margin: -150px 0 0 -150px; animation: spin-sphere-y 10s linear infinite; border-color: rgba(255, 123, 0, 0.5); border-style: dotted; border-width: 2px; }
+.sphere-z { width: 250px; height: 250px; margin: -125px 0 0 -125px; animation: spin-sphere-z 12s linear infinite; opacity: 0.5; }
+@keyframes spin-sphere-x { 0% { transform: rotateX(0) rotateY(0); } 100% { transform: rotateX(360deg) rotateY(180deg); } }
+@keyframes spin-sphere-y { 0% { transform: rotateY(0) rotateZ(0); } 100% { transform: rotateY(360deg) rotateZ(360deg); } }
+@keyframes spin-sphere-z { 0% { transform: rotateZ(0) rotateX(0); } 100% { transform: rotateZ(360deg) rotateX(180deg); } }
+.orbit-particle { position: absolute; width: 6px; height: 6px; background: var(--c-gold-primary); border-radius: 50%; box-shadow: 0 0 10px var(--c-gold-primary); }
+.p1 { animation: orbit1 8s linear infinite; } .p2 { animation: orbit2 12s linear infinite; } .p3 { animation: orbit3 10s linear infinite; }
+@keyframes orbit1 { from { transform: rotate(0deg) translateX(160px) rotate(0deg); } to { transform: rotate(360deg) translateX(160px) rotate(-360deg); } }
+@keyframes orbit2 { from { transform: rotate(0deg) translateX(190px) rotate(0deg); } to { transform: rotate(-360deg) translateX(190px) rotate(360deg); } }
+@keyframes orbit3 { from { transform: rotate(0deg) translateX(220px) rotate(0deg); } to { transform: rotate(180deg) translateX(220px) rotate(-180deg); } }
+
+/* Header Logo Styling */
+.logo-image {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 5px var(--c-gold-glow));
+}
