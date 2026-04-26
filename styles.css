@@ -78,7 +78,7 @@ nav.scrolled { background: rgba(5, 8, 16, 0.8); backdrop-filter: blur(20px); bor
 .logo-image { width: 40px; height: 40px; object-fit: contain; border-radius: 50%; box-shadow: 0 0 10px var(--c-gold-glow); }
 .logo-text-wrapper { position: relative; display: inline-flex; align-items: center; height: 30px; overflow: hidden; }
 .text-laipord { display: inline-block; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); transform-origin: left; }
-.text-ai { position: absolute; left: 0; display: inline-block; color: var(--c-gold-primary); opacity: 0; transform: translateY(100%); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+.text-ai { position: absolute; left: 0; display: inline-block; background: var(--grad-shining); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; opacity: 0; transform: translateY(100%); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
 nav.scrolled .text-laipord { opacity: 0; transform: translateY(-100%); }
 nav.scrolled .text-ai { opacity: 1; transform: translateY(0); }
 .footer-logo-wrap { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
