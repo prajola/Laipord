@@ -370,3 +370,37 @@ a, button, .faq-question { cursor: pointer; }
     .why-grid { grid-template-columns: 1fr; }
     .compare-table th, .compare-table td { padding: 15px; }
 }
+
+/* Hero Definition Block */
+.hero-definition {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--c-glass-border);
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    font-family: monospace;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.def-word {
+    font-weight: 700;
+    color: var(--c-gold-primary);
+    font-size: 1.1rem;
+    margin-right: 8px;
+}
+.def-pronun {
+    color: var(--c-text-muted);
+    font-style: italic;
+    margin-right: 8px;
+}
+.def-type {
+    color: #fff;
+    margin-right: 12px;
+}
+.def-text {
+    color: var(--c-text-muted);
+    border-left: 1px solid var(--c-glass-border);
+    padding-left: 12px;
+}
