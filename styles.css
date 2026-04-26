@@ -478,3 +478,66 @@ a, button, .faq-question { cursor: pointer; }
     .definition-tagline { font-size: 2.2rem; }
     .massive-text { font-size: 2.8rem; }
 }
+
+/* Updated Features Grid for 9 Items */
+.features-grid-9 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+.feature-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--c-glass-border);
+    padding: 30px;
+    border-radius: 12px;
+    transition: var(--transition-smooth);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 168, 67, 0.3);
+}
+.feat-category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--c-text-muted);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+.feature-card h3 {
+    font-family: var(--f-heading);
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+.feature-card p {
+    color: var(--c-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* Signature Feature Special Styling */
+.signature-card {
+    background: rgba(212, 168, 67, 0.03);
+    border: 2px solid var(--c-gold-primary);
+    box-shadow: 0 0 20px rgba(212, 168, 67, 0.1);
+}
+.signature-card:hover {
+    box-shadow: 0 10px 30px rgba(212, 168, 67, 0.2);
+}
+.signature-tag {
+    color: var(--c-gold-primary);
+}
+
+@media (max-width: 992px) {
+    .features-grid-9 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+    .features-grid-9 { grid-template-columns: 1fr; }
+}
