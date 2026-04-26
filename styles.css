@@ -681,3 +681,11 @@ a, button, .faq-question { cursor: pointer; }
     margin-right: 10px;
     filter: drop-shadow(0 0 5px var(--c-gold-glow));
 }
+
+.loader-ai {
+    background: var(--grad-shining) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 0 15px var(--c-gold-glow));
+    font-weight: 900;
+}
