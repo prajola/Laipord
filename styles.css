@@ -423,3 +423,58 @@ a, button, .faq-question { cursor: pointer; }
     .def-text { display: block; margin-top: 15px; border-left: none; border-top: 2px solid var(--c-gold-primary); padding-left: 0; padding-top: 10px; }
     .definition-tagline { font-size: 2rem; }
 }
+
+/* Definition Section */
+.definition-section { padding: 100px 0; text-align: center; position: relative; overflow: hidden; }
+.definition-wrapper { 
+    max-width: 1000px; margin: 0 auto; 
+    background: linear-gradient(180deg, rgba(10, 13, 20, 0.9) 0%, rgba(5, 8, 16, 0.95) 100%);
+    border: 1px solid rgba(212, 168, 67, 0.2); 
+    padding: 80px 40px; 
+    border-radius: 32px; 
+    position: relative; 
+    box-shadow: 0 40px 100px rgba(0,0,0,0.8), inset 0 0 80px rgba(212, 168, 67, 0.05);
+    backdrop-filter: blur(20px);
+}
+.definition-wrapper::before { 
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; 
+    background: linear-gradient(90deg, transparent, var(--c-gold-primary), transparent); 
+    border-radius: 32px 32px 0 0;
+}
+.def-glow-orb {
+    position: absolute; top: -50px; left: 50%; transform: translateX(-50%);
+    width: 300px; height: 100px;
+    background: var(--c-gold-primary);
+    filter: blur(80px); opacity: 0.15; z-index: 0;
+    border-radius: 50%; pointer-events: none;
+}
+.def-header { position: relative; z-index: 1; margin-bottom: 40px; }
+.def-badge {
+    display: inline-block; padding: 8px 24px;
+    background: rgba(212, 168, 67, 0.1);
+    border: 1px solid rgba(212, 168, 67, 0.3);
+    border-radius: 30px; font-family: var(--f-heading);
+    color: var(--c-gold-primary); font-size: 0.9rem; font-weight: 700;
+    letter-spacing: 3px; box-shadow: 0 0 20px rgba(212, 168, 67, 0.2);
+}
+.def-content-box { position: relative; z-index: 1; margin-bottom: 40px; }
+.def-main-text { font-family: var(--f-heading); font-size: 2.8rem; font-weight: 400; color: #fff; line-height: 1.3; }
+.text-gradient-gold { 
+    background: linear-gradient(90deg, #F5C842 0%, #D4A843 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+.def-divider { display: flex; align-items: center; justify-content: center; gap: 20px; margin: 50px 0; position: relative; z-index: 1; }
+.def-line { height: 1px; width: 100px; background: linear-gradient(90deg, transparent, rgba(212, 168, 67, 0.3), transparent); }
+.def-diamond { width: 8px; height: 8px; background: var(--c-gold-primary); transform: rotate(45deg); box-shadow: 0 0 10px var(--c-gold-primary); }
+
+.definition-tagline { font-family: var(--f-heading); font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 30px; color: #fff; letter-spacing: -1px; position: relative; z-index: 1; }
+.massive-text { font-size: 4.5rem; display: block; margin-top: 10px; filter: drop-shadow(0 0 20px rgba(212, 168, 67, 0.2)); }
+.definition-desc { font-size: 1.3rem; color: var(--c-text-muted); max-width: 800px; margin: 0 auto; line-height: 1.6; position: relative; z-index: 1; }
+
+@media (max-width: 768px) {
+    .definition-wrapper { padding: 50px 20px; }
+    .def-main-text { font-size: 1.8rem; }
+    .definition-tagline { font-size: 2.2rem; }
+    .massive-text { font-size: 2.8rem; }
+}
