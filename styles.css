@@ -689,3 +689,11 @@ a, button, .faq-question { cursor: pointer; }
     filter: drop-shadow(0 0 15px var(--c-gold-glow));
     font-weight: 900;
 }
+
+.header-ai {
+    background: var(--grad-shining);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    filter: drop-shadow(0 0 5px var(--c-gold-glow));
+}
