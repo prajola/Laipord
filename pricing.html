@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans | LAIPORD AI Sales Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            padding: 120px 20px 60px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(255,123,0,0.05) 0%, transparent 100%);
+        }
+        .pricing-hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+    </style>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('laipord-theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+    <!-- BACKGROUND ANIMATIONS -->
+    <div class="aura-container">
+        <div class="aura-blob aura-1"></div>
+        <div class="aura-blob aura-2"></div>
+        <div class="aura-blob aura-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+    <canvas id="particle-canvas"></canvas>
+    <canvas id="neural-grid"></canvas>
+
+    <!-- NAVIGATION (Simplified) -->
+    <nav id="navbar" class="scrolled">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="Laipord Logo" class="logo-image">
+                <div class="logo-text-wrapper">
+                    <span class="text-laipord">L<span class="header-ai">AI</span>PORD</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="login.html" class="btn btn-gold" style="padding: 8px 20px; font-size: 0.9rem; margin-left: 10px;">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1 class="hero-title" style="font-size: 3.5rem;">Transparent <span class="text-gold">Pricing</span></h1>
+        <p class="hero-subtitle">Scale your sales engine as your revenue grows.</p>
+    </header>
+
+    <main class="pricing-hero">
+        <!-- Re-using the pricing section from the main page -->
+        <section id="pricing" class="section" style="padding: 0;">
+            <div class="pricing-grid">
+                <div class="pricing-card reveal-up" style="--delay:0.1s">
+                    <div class="pricing-tier">Starter</div>
+                    <div class="pricing-price">$99<span>/mo</span></div>
+                    <ul class="pricing-features">
+                        <li>1 AI Sales Agent</li>
+                        <li>500 Leads / month</li>
+                        <li>Basic CRM Integration</li>
+                        <li>Email Outreach only</li>
+                    </ul>
+                    <button class="btn btn-ghost">Start Predator</button>
+                </div>
+                <div class="pricing-card active reveal-up" style="--delay:0.2s">
+                    <div class="pricing-tier">Enterprise</div>
+                    <div class="pricing-price">$499<span>/mo</span></div>
+                    <ul class="pricing-features">
+                        <li>5 AI Sales Agents</li>
+                        <li>Unlimited Leads</li>
+                        <li>Full Stack Integration</li>
+                        <li>Multi-channel Hunting</li>
+                        <li>Priority Neural Processing</li>
+                    </ul>
+                    <button class="btn btn-gold">Unleash Now</button>
+                </div>
+                <div class="pricing-card reveal-up" style="--delay:0.3s">
+                    <div class="pricing-tier">Apex</div>
+                    <div class="pricing-price">Custom</div>
+                    <ul class="pricing-features">
+                        <li>Unlimited Agents</li>
+                        <li>Custom Neural Training</li>
+                        <li>Dedicated Infrastructure</li>
+                        <li>24/7 Human Oversight</li>
+                    </ul>
+                    <button class="btn btn-ghost">Contact Sales</button>
+                </div>
+            </div>
+        </main>
+
+    <footer id="footer">
+        <div class="footer-bottom">
+            <p>© 2026 LAIPORD. All rights reserved. Built with predatory precision.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

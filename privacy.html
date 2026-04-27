@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | LAIPORD AI Sales Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            padding: 120px 20px 60px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(255,123,0,0.05) 0%, transparent 100%);
+        }
+        .page-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            line-height: 1.8;
+            color: var(--c-text-muted);
+        }
+        .page-content h2 {
+            color: #fff;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-family: var(--f-heading);
+        }
+        [data-theme="light"] .page-content h2 { color: #1A1814; }
+        [data-theme="light"] .page-content { color: #444; }
+    </style>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('laipord-theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+    <!-- BACKGROUND ANIMATIONS -->
+    <div class="aura-container">
+        <div class="aura-blob aura-1"></div>
+        <div class="aura-blob aura-2"></div>
+        <div class="aura-blob aura-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+    <canvas id="particle-canvas"></canvas>
+    <canvas id="neural-grid"></canvas>
+
+    <!-- NAVIGATION (Simplified) -->
+    <nav id="navbar" class="scrolled">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="Laipord Logo" class="logo-image">
+                <div class="logo-text-wrapper">
+                    <span class="text-laipord">L<span class="header-ai">AI</span>PORD</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="login.html" class="btn btn-gold" style="padding: 8px 20px; font-size: 0.9rem; margin-left: 10px;">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1 class="hero-title" style="font-size: 3.5rem;">Privacy <span class="text-gold">Policy</span></h1>
+        <p class="hero-subtitle">How we protect your data with predatory precision.</p>
+    </header>
+
+    <main class="page-content">
+        <h2>Data Security</h2>
+        <p>Your data is your most valuable asset. LAIPORD employs enterprise-grade encryption and secure neural processing to ensure that your leads and sales strategies remain yours alone. We do not sell or share your data with third parties.</p>
+        
+        <h2>GDPR Compliance</h2>
+        <p>LAIPORD is fully compliant with GDPR and other global data protection regulations. We've built our Sales Engine to respect user privacy while still delivering high-impact results.</p>
+
+        <h2>AI Privacy</h2>
+        <p>Our AI agents are trained in secure environments. Any data processed by LAIPORD is used exclusively to improve your specific sales performance and is never used to benefit competitors.</p>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-bottom">
+            <p>© 2026 LAIPORD. All rights reserved. Built with predatory precision.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
