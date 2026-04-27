@@ -287,3 +287,24 @@ document.querySelectorAll('.faq-question').forEach(q => {
         if(!isActive) item.classList.add('active');
     });
 });
+
+// =============================================
+// THEME TOGGLE
+// =============================================
+(function() {
+    const html = document.documentElement;
+    const toggleBtn = document.getElementById('theme-toggle');
+
+    // Load saved preference
+    const savedTheme = localStorage.getItem('laipord-theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('laipord-theme', next);
+        });
+    }
+})();
