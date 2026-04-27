@@ -1264,11 +1264,12 @@ img {
 }
 
 .stat-box {
-    background: var(--g-gold);
+    background: rgba(255, 123, 0, 0.1);
+    border: 1px solid rgba(255, 123, 0, 0.3);
     padding: 20px;
     border-radius: 16px;
     text-align: center;
-    color: #000;
+    color: #fff;
 }
 
 .stat-val {
@@ -1277,12 +1278,14 @@ img {
     font-family: var(--f-heading);
     line-height: 1;
     margin-bottom: 5px;
+    color: var(--c-gold-primary);
 }
 
 .stat-box p {
     font-size: 0.8rem;
     font-weight: 700;
     opacity: 0.8;
+    color: #fff;
 }
 
 /* Light Theme Overrides */
