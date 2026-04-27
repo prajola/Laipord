@@ -831,7 +831,27 @@ a, button, .faq-question { cursor: pointer; }
 [data-theme="light"] .logo-text { color: #0A0A0F; }
 
 [data-theme="light"] .definition-section { background: linear-gradient(135deg, #fff 0%, #FFF8F0 100%); }
-[data-theme="light"] .definition-wrapper { background: rgba(255,255,255,0.9); border-color: rgba(255,123,0,0.2); }
+
+[data-theme="light"] .definition-wrapper {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFF9F2 100%) !important;
+    border: 1px solid rgba(255, 123, 0, 0.15) !important;
+    box-shadow: 0 40px 100px rgba(255, 123, 0, 0.08), 
+                inset 0 0 50px rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+[data-theme="light"] .definition-wrapper::before {
+    background: linear-gradient(90deg, transparent, var(--c-gold-primary), transparent) !important;
+    height: 2px !important;
+    width: 300px !important;
+    opacity: 0.8 !important;
+}
+
+[data-theme="light"] .definition-wrapper .badge-pill {
+    background: rgba(255, 123, 0, 0.05) !important;
+    border-color: rgba(255, 123, 0, 0.2) !important;
+}
+
 [data-theme="light"] .def-main-text { color: #0A0A0F; }
 [data-theme="light"] .definition-tagline { color: #0A0A0F; }
 [data-theme="light"] .definition-desc { color: #555; }
@@ -978,11 +998,27 @@ a, button, .faq-question { cursor: pointer; }
     box-shadow: 0 20px 40px rgba(255, 123, 0, 0.08) !important;
 }
 
+
 [data-theme="light"] .definition-wrapper {
-    background: #FFFFFF !important;
-    border-color: rgba(255, 123, 0, 0.2) !important;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.05) !important;
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFF9F2 100%) !important;
+    border: 1px solid rgba(255, 123, 0, 0.15) !important;
+    box-shadow: 0 40px 100px rgba(255, 123, 0, 0.08), 
+                inset 0 0 50px rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(10px) !important;
 }
+
+[data-theme="light"] .definition-wrapper::before {
+    background: linear-gradient(90deg, transparent, var(--c-gold-primary), transparent) !important;
+    height: 2px !important;
+    width: 300px !important;
+    opacity: 0.8 !important;
+}
+
+[data-theme="light"] .definition-wrapper .badge-pill {
+    background: rgba(255, 123, 0, 0.05) !important;
+    border-color: rgba(255, 123, 0, 0.2) !important;
+}
+
 
 [data-theme="light"] .btn-outline {
     border-color: #1A1814 !important;
