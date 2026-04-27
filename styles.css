@@ -1141,3 +1141,8 @@ a, button, .faq-question { cursor: pointer; }
 
 [data-theme="light"] .aura-container { display: block; }
 [data-theme="light"] #particle-canvas, [data-theme="light"] #neural-grid { display: none; }
+
+[data-theme="light"] .metric-percent { color: #1A1814 !important; }
+[data-theme="light"] .metric-card h3 { color: #1A1814 !important; }
+[data-theme="light"] .metric-card p { color: #706B63 !important; }
+[data-theme="light"] .ring-bg { stroke: rgba(0,0,0,0.05) !important; }
