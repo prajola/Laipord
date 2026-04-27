@@ -915,3 +915,16 @@ a, button, .faq-question { cursor: pointer; }
 /* Mobile Menu Fix */
 [data-theme="light"] .mobile-link { color: #1A1A1A !important; }
 [data-theme="light"] .nav-hamburger span { background: #1A1A1A !important; }
+
+/* Fix for white text on white background in light theme */
+[data-theme="light"] .loader-letter { color: #000000 !important; }
+[data-theme="light"] .logo-text { color: #000000 !important; }
+[data-theme="light"] .footer-logo-wrap .logo-text { color: #000000 !important; }
+[data-theme="light"] #loader { background: #FFFFFF !important; }
+[data-theme="light"] .loader-text { color: #333333 !important; }
+[data-theme="light"] .loader-bar { background: rgba(0,0,0,0.1) !important; }
+[data-theme="light"] .loader-fill { background: var(--c-gold-primary) !important; }
+
+/* Ensure logo text in header is also black */
+[data-theme="light"] .logo-text-wrapper .logo-text { color: #000000 !important; }
+[data-theme="light"] .navbar-logo span { color: #000000 !important; }
