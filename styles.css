@@ -1075,3 +1075,10 @@ a, button, .faq-question { cursor: pointer; }
     z-index: -1;
     pointer-events: none;
 }
+
+/* Theme-specific background visibility */
+[data-theme="dark"] .aura-container { display: none; }
+[data-theme="dark"] #particle-canvas, [data-theme="dark"] #neural-grid { display: block; opacity: 1; }
+
+[data-theme="light"] .aura-container { display: block; }
+[data-theme="light"] #particle-canvas, [data-theme="light"] #neural-grid { display: none; }
