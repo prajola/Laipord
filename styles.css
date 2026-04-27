@@ -697,3 +697,48 @@ a, button, .faq-question { cursor: pointer; }
     font-weight: 900;
     filter: drop-shadow(0 0 5px var(--c-gold-glow));
 }
+
+/* Body Navigation Hub (Requested Format) */
+.body-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+}
+.body-nav-link {
+    color: var(--c-text-muted);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: var(--transition-fast);
+    position: relative;
+}
+.body-nav-link:hover {
+    color: var(--c-gold-primary);
+}
+.body-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--grad-shining);
+    transition: width 0.3s ease;
+}
+.body-nav-link:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .body-nav {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+}
