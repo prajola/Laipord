@@ -889,3 +889,29 @@ a, button, .faq-question { cursor: pointer; }
 [data-theme=light] .footer-bottom p { color: #888888 !important; }
 [data-theme=light] #particle-canvas { opacity: 0.2 !important; }
 [data-theme=light] .mascot-glow { opacity: 0.1 !important; }
+
+/* Light Theme Fixes for missing text */
+[data-theme="light"] .price-amount { color: #1A1A1A !important; }
+[data-theme="light"] .pricing-features li { color: #444444 !important; border-bottom-color: rgba(0,0,0,0.05) !important; }
+[data-theme="light"] .feature-card p { color: #555555 !important; }
+[data-theme="light"] .feat-category { color: var(--c-gold-primary) !important; opacity: 0.8 !important; }
+[data-theme="light"] .problem-item .prob-bad { color: #666666 !important; }
+[data-theme="light"] .problem-item .prob-good { color: #1A1A1A !important; }
+[data-theme="light"] .pricing-tier { color: #1A1A1A !important; }
+[data-theme="light"] .pricing-price { color: #666666 !important; }
+[data-theme="light"] .price-currency, [data-theme="light"] .price-period { color: #666666 !important; }
+
+/* Dashboard Light Mode specific fixes */
+[data-theme="light"] .dash-kpi-row { border-color: rgba(0,0,0,0.05) !important; }
+[data-theme="light"] .kpi-val { color: #1A1A1A !important; }
+[data-theme="light"] .kpi-label { color: #666666 !important; }
+[data-theme="light"] .chart-title { color: #1A1A1A !important; }
+[data-theme="light"] .chat-msg.ai { background: rgba(0,0,0,0.05) !important; color: #1A1A1A !important; border-color: rgba(0,0,0,0.05) !important; }
+[data-theme="light"] .chat-msg.user { background: #FFFFFF !important; color: #666666 !important; border: 1px solid rgba(0,0,0,0.05) !important; }
+[data-theme="light"] .dash-nav-item { color: #666666 !important; }
+[data-theme="light"] .dash-nav-item.active { background: rgba(0,0,0,0.05) !important; color: #1A1A1A !important; }
+[data-theme="light"] .chat-input { background: #FFFFFF !important; color: #1A1A1A !important; border-color: rgba(0,0,0,0.1) !important; }
+
+/* Mobile Menu Fix */
+[data-theme="light"] .mobile-link { color: #1A1A1A !important; }
+[data-theme="light"] .nav-hamburger span { background: #1A1A1A !important; }
