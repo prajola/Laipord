@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | LAIPORD AI Sales Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .login-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 450px;
+            background: rgba(10, 13, 20, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            padding: 50px 40px;
+            border-radius: 32px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        [data-theme="light"] .login-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-color: rgba(255, 123, 0, 0.1);
+            box-shadow: 0 40px 100px rgba(255, 123, 0, 0.1);
+        }
+
+        .login-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+
+        .login-logo img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .login-title {
+            font-family: var(--f-heading);
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        [data-theme="light"] .login-title { color: #1A1814; }
+
+        .login-subtitle {
+            color: var(--c-text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--c-text-muted);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 14px 18px;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="light"] .form-input {
+            background: #F8F5F0;
+            border-color: rgba(0,0,0,0.05);
+            color: #1A1814;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--c-gold-primary);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 16px;
+            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .social-login {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="light"] .social-btn {
+            background: #FFFFFF;
+            border-color: rgba(0,0,0,0.05);
+            color: #1A1814;
+        }
+
+        .social-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .login-footer {
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: var(--c-text-muted);
+        }
+
+        .login-footer a {
+            color: var(--c-gold-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-home {
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 100;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        [data-theme="light"] .back-home { color: #1A1814; }
+
+        .back-home:hover { opacity: 1; }
+    </style>
+    <script>
+        // Immediate theme initialization
+        (function() {
+            const savedTheme = localStorage.getItem('laipord-theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+    
+    <!-- LIQUID AURA BACKGROUND -->
+    <div class="aura-container">
+        <div class="aura-blob aura-1"></div>
+        <div class="aura-blob aura-2"></div>
+        <div class="aura-blob aura-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+    <canvas id="particle-canvas"></canvas>
+    <canvas id="neural-grid"></canvas>
+
+    <a href="index.html" class="back-home">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to Home
+    </a>
+
+    <main class="login-page">
+        <div class="login-card reveal-up">
+            <a href="index.html" class="login-logo">
+                <img src="logo.png" alt="Laipord">
+                <div class="logo-text-wrapper">
+                    <span class="text-laipord" style="color: #fff; font-family: var(--f-heading); font-weight: 800; font-size: 1.5rem; letter-spacing: 2px;">L<span style="background: var(--g-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AI</span>PORD</span>
+                </div>
+            </a>
+
+            <h2 class="login-title">Welcome Back</h2>
+            <p class="login-subtitle">Enter your credentials to access the Sales Engine</p>
+
+            <form action="#">
+                <div class="form-group">
+                    <label for="email">Work Email</label>
+                    <input type="email" id="email" class="form-input" placeholder="name@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-gold login-btn">Sign In to Engine</button>
+            </form>
+
+            <div class="social-login">
+                <button class="social-btn">
+                    <img src="https://www.google.com/favicon.ico" width="16" height="16" alt="Google">
+                    Google
+                </button>
+                <button class="social-btn">
+                    <img src="https://www.microsoft.com/favicon.ico" width="16" height="16" alt="Microsoft">
+                    Microsoft
+                </button>
+            </div>
+
+            <div class="login-footer">
+                Don't have an account? <a href="#">Request Access</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
