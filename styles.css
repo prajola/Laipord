@@ -928,3 +928,6 @@ a, button, .faq-question { cursor: pointer; }
 /* Ensure logo text in header is also black */
 [data-theme="light"] .logo-text-wrapper .logo-text { color: #000000 !important; }
 [data-theme="light"] .navbar-logo span { color: #000000 !important; }
+
+/* Specific fix for the Logo text in light theme */
+[data-theme="light"] .text-laipord { color: #000000 !important; }
