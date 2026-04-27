@@ -295,8 +295,14 @@ function createParticles() {
     }
 }
 
+// Performance Optimization: Pause animations when tab is hidden
+let isTabActive = true;
+document.addEventListener('visibilitychange', () => {
+    isTabActive = !document.hidden;
+});
+
 function animateParticles() {
-    if(!canvas || document.documentElement.getAttribute('data-theme') === 'light') {
+    if(!canvas || !isTabActive || document.documentElement.getAttribute('data-theme') === 'light') {
         requestAnimationFrame(animateParticles);
         return;
     }

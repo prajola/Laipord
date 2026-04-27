@@ -1146,3 +1146,17 @@ a, button, .faq-question { cursor: pointer; }
 [data-theme="light"] .metric-card h3 { color: #1A1814 !important; }
 [data-theme="light"] .metric-card p { color: #706B63 !important; }
 [data-theme="light"] .ring-bg { stroke: rgba(0,0,0,0.05) !important; }
+
+/* Performance Optimizations */
+.aura-blob, .hero-image, .mascot-container, .logo-text, .text-laipord {
+    will-change: transform, opacity;
+}
+
+#particle-canvas, #neural-grid {
+    pointer-events: none;
+    backface-visibility: hidden;
+}
+
+img {
+    content-visibility: auto;
+}
