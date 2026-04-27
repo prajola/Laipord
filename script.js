@@ -31,17 +31,9 @@ interactables.forEach(el => {
     });
 });
 
-// Loader
+// Initial reveals
 window.addEventListener('load', () => {
-    setTimeout(() => {
-        const loader = document.getElementById('loader');
-        loader.style.opacity = '0';
-        setTimeout(() => {
-            loader.style.display = 'none';
-            // Trigger initial reveals
-            reveal();
-        }, 800);
-    }, 2000); // 2 second loading simulation
+    reveal();
 });
 
 // Navbar Scroll Effect
