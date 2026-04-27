@@ -1022,3 +1022,56 @@ a, button, .faq-question { cursor: pointer; }
 [data-theme="light"] #particle-canvas {
     opacity: 1 !important;
 }
+
+/* Liquid Aura Animation (Premium & Impactful) */
+.aura-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    background: var(--c-void);
+}
+
+.aura-blob {
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    mix-blend-mode: screen;
+    animation: move-aura 25s ease-in-out infinite alternate;
+}
+
+[data-theme="light"] .aura-blob {
+    opacity: 0.1;
+    mix-blend-mode: multiply;
+}
+
+.aura-1 { background: var(--c-gold-primary); top: -10%; left: -10%; }
+.aura-2 { background: var(--c-gold-light); bottom: -10%; right: -10%; animation-delay: -5s; }
+.aura-3 { background: #FF3C00; top: 40%; left: 30%; width: 40vw; height: 40vw; animation-delay: -12s; }
+
+@keyframes move-aura {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(10vw, 5vh) scale(1.1); }
+    66% { transform: translate(-5vw, 15vh) scale(0.9); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
+/* Texture Overlay */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://grainy-gradients.vercel.app/noise.svg');
+    opacity: 0.05;
+    z-index: -1;
+    pointer-events: none;
+}
